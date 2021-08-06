@@ -38,7 +38,8 @@ endpoints functions.
 # Useage
 
 * Launch the server
-  + If Uvicorn and FastAPI are already installed in your `pip` environment:
+  + If Uvicorn and FastAPI are already installed in your `pip` environment
+    (see the [installation section below](#installation) if needed):
 ```bash
 $ uvicorn uvicorn-delay:app --port 8001 --reload
 INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
@@ -62,6 +63,10 @@ $ curl localhost:8001/delay/0.0/0.0 && echo
 ```javascript
 {"delays":[0.0,0.0],"total_time_taken_ms":5702,"times_avarage_ms":42.69,"times":[146,70,47,42,44,40,31,30,30,69,71,40,40,40,41,40,41,39,40,40,40,40,39,40,40,49,40,40,40,39,40,39,40,39,39,39,39,39,39,44,58,58,43,41,39,38,38,39,39,38,40,39,39,41,39,39,39,51,54,70,43,40,39,39,39,39,38,38,39,39,39,38,38,39,39,38,39,55,63,43,39,38,39,39,39,39,42,41,40,38,39,39,38,38,38,39,39,38,38,38]}
 ```
+
+* Or from a browser with the https://localhost:8001/docs URL:
+![FastAPI automatic documentation](img/uvicorn-playground-fastapi-docs-01.png)
+
 
 # Installation
 
@@ -97,7 +102,7 @@ $ . ~/.bashrc
   + If PyEnv was already cloned a long time ago, think to update
     the repository from time to time:
 ```bash
-$ pushd ~/.pyenv && git upll && popd
+$ pushd ~/.pyenv && git pull && popd
 ```
   + Install a specific version of Python (_e.g._, as of August 2021, 3.9.6
     is the latest stable version):
